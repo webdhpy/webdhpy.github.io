@@ -6,11 +6,61 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Trường đại học phú yên</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
     </head>
     <body>
-        <div>My website on Github</div>
+        <form action="doRegister.html" method="get">
+            <fieldset>
+                <legend>Personal information:</legend>
+
+                <div>First name:<input required type="text" placeholder="input your fistname..." name="txtfirstname"/></div>
+                <div>Last name: <input required type="text" placeholder="input your lastname..." name="txtlastname"/></div>
+                <div>           <textarea name="note" rows="8" cols="50">nội dung mặc định</textarea></div>
+                <div>Password:  <input required type="password" name="txtPassword"/></div>
+                <div>
+                    <input type="radio" name="sex" value="male">Male
+                    <input type="radio" name="sex" value="female">Female           
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Education information:</legend>
+                <div>
+                    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+                    <input type="checkbox" name="vehicle" value="Car">I have a car           
+                </div>
+                <div>
+                    <select name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+                <br>
+                Select your favorite color:
+                <input type="color" name="favcolor">
+                <br>
+                Birthday: <input type="date" name="bday">
+                <br>
+                E-mail:<input required type="email" name="email">
+                <br>
+                Quantity (between 1 and 5):
+                <input type="number" name="quantity" min="0" max="100">
+                <br>
+                Search Google:
+                <input type="search" name="googlesearch">
+                <br>
+                Telephone:
+                <input type="tel" name="usrtel">
+            </fieldset>
+            <div>            
+                <input type="reset" value="Nhập lại"/>
+                <input type="submit" name="btnsubmit" value="Gửi đi"/>
+            </div>
+        </form>
     </body>
 </html>
